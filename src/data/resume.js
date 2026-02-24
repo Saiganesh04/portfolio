@@ -10,7 +10,6 @@ export const personal = {
   stats: [
     { label: 'Years Experience', value: '3+' },
     { label: 'Azure Certifications', value: '8' },
-    { label: 'VMs Automated', value: '150+' },
   ],
 }
 
