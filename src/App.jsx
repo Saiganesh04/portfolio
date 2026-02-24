@@ -8,11 +8,13 @@ import Education from './components/Education'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import CursorGlow from './components/CursorGlow'
+import Chatbot from './components/Chatbot'
 
 export default function App() {
   return (
     <>
       <CursorGlow />
+      <Chatbot />
 
       <div className="mx-auto min-h-screen max-w-screen-xl lg:flex">
         {/* Left sidebar */}
