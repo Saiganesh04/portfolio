@@ -9,7 +9,7 @@ export const personal = {
     'I build robust, scalable software systems and AI-driven automation platforms. I specialize in cloud-native microservices, intelligent agent orchestration, and full-stack development\u2014turning complex infrastructure challenges into elegant, automated solutions.',
   stats: [
     { label: 'Years Experience', value: '3+' },
-    { label: 'Azure Certifications', value: '8' },
+    { label: 'Certifications', value: '13' },
   ],
 }
 
@@ -111,7 +111,12 @@ export const certifications = [
   { name: 'DP-500 Azure Enterprise Data Analyst Associate', issuer: 'Microsoft' },
   { name: 'AZ-400 DevOps Engineer Expert', issuer: 'Microsoft' },
   { name: 'PL-100 Power Platform App Maker Associate', issuer: 'Microsoft' },
-  { name: 'CC0150EN Building Cloud Native Applications', issuer: 'IBM' },
+  { name: 'SC-900 Security, Compliance, and Identity Fundamentals', issuer: 'Microsoft' },
+  { name: 'AI-900 Azure AI Fundamentals', issuer: 'Microsoft' },
+  { name: 'DP-900 Azure Data Fundamentals', issuer: 'Microsoft' },
+  { name: 'CC0150EN Building Cloud Native and Multicloud Applications', issuer: 'IBM' },
+  { name: 'CC0103EN IBM Cloud Essentials V3', issuer: 'IBM' },
+  { name: 'CC0101EN Introduction to Cloud', issuer: 'IBM' },
 ]
 
 export const education = [
