@@ -1,49 +1,26 @@
 @import "tailwindcss";
 
 @theme {
-  --color-navy-950: #0a0f1c;
-  --color-navy-900: #0f1629;
-  --color-navy-800: #151d35;
-  --color-navy-700: #1e2a4a;
-  --color-navy-600: #2a3a5c;
-  --color-slate-100: #e2e8f0;
-  --color-slate-300: #cbd5e1;
-  --color-slate-400: #94a3b8;
-  --color-slate-500: #64748b;
-  --color-cyan-400: #38bdf8;
-  --color-indigo-400: #818cf8;
-  --font-heading: 'Sora', sans-serif;
-  --font-body: 'Outfit', sans-serif;
+  --color-bg: #08080c;
+  --color-card: #111115;
+  --color-card-border: #1e1e24;
+  --color-card-hover: #333;
+  --font-sans: 'DM Sans', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 }
 
-/* Base */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 6rem;
 }
 
 body {
   margin: 0;
-  background-color: var(--color-navy-950);
-  color: var(--color-slate-300);
-  font-family: var(--font-body);
+  background-color: #08080c;
+  color: #eee;
+  font-family: 'DM Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-}
-
-/* Subtle grid overlay */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background-image:
-    linear-gradient(rgba(56, 189, 248, 0.015) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(56, 189, 248, 0.015) 1px, transparent 1px);
-  background-size: 60px 60px;
 }
 
 #root {
@@ -51,23 +28,51 @@ body::before {
   z-index: 1;
 }
 
-/* Scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
+/* Tile base */
+.tile {
+  background: #111115;
+  border: 1px solid #1e1e24;
+  border-radius: 20px;
+  padding: 24px;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
-::-webkit-scrollbar-track {
-  background: var(--color-navy-950);
-}
-::-webkit-scrollbar-thumb {
-  background: var(--color-navy-700);
-  border-radius: 3px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-cyan-400);
+.tile:hover {
+  border-color: #333;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.2);
 }
 
-/* Selection */
+/* Bento grid */
+.bento-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+@media (min-width: 1024px) {
+  .bento-grid {
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 80px;
+  }
+  .tile-hero { grid-column: 1 / 8; grid-row: 1 / 4; }
+  .tile-phone { grid-column: 8 / 13; grid-row: 1 / 6; }
+  .tile-stats { grid-column: 1 / 8; grid-row: 4 / 6; }
+  .tile-experience { grid-column: 1 / 9; grid-row: 6 / 10; }
+  .tile-terminal { grid-column: 9 / 13; grid-row: 6 / 10; }
+  .tile-project1 { grid-column: 1 / 7; grid-row: 10 / 12; }
+  .tile-project2 { grid-column: 7 / 13; grid-row: 10 / 12; }
+  .tile-skills { grid-column: 1 / 6; grid-row: 12 / 15; }
+  .tile-certs { grid-column: 6 / 13; grid-row: 12 / 15; }
+  .tile-education { grid-column: 1 / 13; grid-row: 15 / 17; }
+  .tile-connect { grid-column: 1 / 13; grid-row: 17 / 19; }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #08080c; }
+::-webkit-scrollbar-thumb { background: #1e1e24; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #22d3ee; }
+
 ::selection {
-  background: rgba(56, 189, 248, 0.2);
-  color: var(--color-slate-100);
+  background: rgba(34, 211, 238, 0.2);
+  color: #eee;
 }

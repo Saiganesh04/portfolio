@@ -1,38 +1,32 @@
-import Sidebar from './components/Sidebar'
-import About from './components/About'
-import Experience from './components/Experience'
-import Projects from './components/Projects'
-import Skills from './components/Skills'
-import Certifications from './components/Certifications'
-import Education from './components/Education'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
-import CursorGlow from './components/CursorGlow'
+import HeroTile from './components/HeroTile'
+import PhoneMockup from './components/PhoneMockup'
+import StatsTile from './components/StatsTile'
+import ExperienceTile from './components/ExperienceTile'
+import TerminalTile from './components/TerminalTile'
+import ProjectsTile from './components/ProjectsTile'
+import SkillsTile from './components/SkillsTile'
+import CertsTile from './components/CertsTile'
+import EducationTile from './components/EducationTile'
+import ConnectBar from './components/ConnectBar'
 import Chatbot from './components/Chatbot'
 
 export default function App() {
   return (
     <>
-      <CursorGlow />
       <Chatbot />
-
-      <div className="mx-auto min-h-screen max-w-screen-xl lg:flex">
-        {/* Left sidebar */}
-        <Sidebar />
-
-        {/* Right scrollable content */}
-        <main className="lg:ml-[42%] lg:w-[58%] lg:py-16 lg:pr-12 xl:pr-20 xl:py-20 px-6 pb-16">
-          <div className="space-y-24 lg:space-y-32">
-            <About />
-            <Experience />
-            <Projects />
-            <Skills />
-            <Certifications />
-            <Education />
-            <Contact />
-          </div>
-          <Footer />
-        </main>
+      <div className="mx-auto max-w-[1400px] px-4 py-6 lg:px-6 lg:py-10">
+        <div className="bento-grid">
+          <HeroTile />
+          <PhoneMockup />
+          <StatsTile />
+          <ExperienceTile />
+          <TerminalTile />
+          <ProjectsTile />
+          <SkillsTile />
+          <CertsTile />
+          <EducationTile />
+          <ConnectBar />
+        </div>
       </div>
     </>
   )
