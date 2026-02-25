@@ -78,7 +78,7 @@ const QUICK_ACTIONS = [
   { label: 'Projects', prompt: "What projects has Sai built?" },
 ]
 
-const WORKER_URL = import.meta.env.VITE_CHAT_API_URL || ''
+const WORKER_URL = 'https://portfolio-chat.saiganesh04092000.workers.dev'
 
 function BotIcon() {
   return (
